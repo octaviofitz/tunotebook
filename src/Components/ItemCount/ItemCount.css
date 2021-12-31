@@ -1,0 +1,30 @@
+
+#addAndRemove{
+    margin-top: -2rem;
+    background-color: #8C7A2D;
+}
+
+.countCart{
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 22px;
+
+}
+
+/* #addCart{
+    display: flex;
+    margin: auto;
+    margin-bottom: 1rem;
+    background-color: #8C7A2D;
+    color: #fdfdfd;
+    border-radius: 2px;
+    border: none;
+}
+ */
+.botonesProducto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}

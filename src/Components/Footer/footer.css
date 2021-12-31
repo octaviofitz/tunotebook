@@ -1,0 +1,51 @@
+.footer{
+    background-color: #0F2E20;
+    color: #FFFFF1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+} 
+
+.titleFooter{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.datosFooter{
+    font-size: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.datosFooterDinamicos{
+    font-size: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+@media (min-width: 720px) {
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 10rem;
+    }
+    
+    .titleFooter{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .datosFooter{
+        font-size: 0.8rem;
+        margin-top: -0.2rem;
+    }
+
+    .datosFooterDinamicos{
+        display: none;
+    }
+}

@@ -1,0 +1,16 @@
+#loader{
+    display: flex;
+    margin: auto;
+    margin-top: 3rem;
+    
+} 
+
+.containerPrueba{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.itemOculto{
+    display: none;
+}
