@@ -11,7 +11,7 @@
 .cartWidget {
     position: absolute;
     z-index: 1;
-    width: 400px;
+    width: 100%;
     height: auto;
     background: #F8F8F8;
     right: 0px;
@@ -37,15 +37,15 @@
     margin: 0px 0.5rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    padding: 1rem 1rem;
+    padding: 0.4rem 0.4rem;
     border-radius: 2px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
 }
 
 .img-cart-widget{
-    width: 150px;
-    height: 100px;
+    width: 130px;
+    height: 95px;
 }
 
 .name-cart-widget,
@@ -72,6 +72,19 @@
     font-weight: 400;
 }
 
+#addCartDetailWidget{
+    display: flex;
+    margin: auto;
+    margin-bottom: 0.8rem;
+}
 
-
-
+@media (min-width: 720px) {
+    
+    .cartWidget {
+        width: 500px;
+    }
+    
+    .container-widget-cart{
+        padding: 1rem 1rem;   
+    }
+}

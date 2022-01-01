@@ -48,9 +48,8 @@ function CartWidget() {
         
   )  : <></>
 }           
-            {products.length === 0 ? <></>: <Link to='/carrito'><Button variant="outlined" size="small" id="addCartDetail" className='boton-cart-widget' style={{borderRadius: '2px', marginLeft: '10.5rem', marginBottom: '1.5rem', marginTop: '1.5rem'}}>Carrito</Button></Link>}
-
-          
+            {products.length === 0 ? <></>: <Link to='/carrito'><Button variant="outlined" size="small" id="addCartDetailWidget" className='boton-cart-widget'  style={{borderRadius: '2px', color: 'white', backgroundColor: '#8C7A2D', border: 'none'}} >Carrito</Button></Link>}
+         
 
 </div>
 </i> 

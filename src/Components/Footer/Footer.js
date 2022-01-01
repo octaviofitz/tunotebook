@@ -22,9 +22,9 @@ function Footer() {
       <h3 className="titleFooter">Enlaces útiles</h3>
       <p className="datosFooter">Inicio</p>
       <p className="datosFooter">Productos</p>
-      <p className="datosFooterDinamicos">Marcas</p>
+      {/* <p className="datosFooterDinamicos">Marcas</p>
       <p className="datosFooterDinamicos">Nosotros</p>
-      <p className="datosFooterDinamicos">Contacto</p>
+      <p className="datosFooterDinamicos">Contacto</p> */}
       
       </div>
 
