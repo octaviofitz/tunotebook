@@ -1,6 +1,5 @@
 import React, { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import '../ItemListContainer/itemListContainer.css'
 import ItemList from '../ItemList/ItemList'
 
 function ItemListContainer() {
@@ -59,6 +58,7 @@ function ItemListContainer() {
 useEffect(() => {
     getProducts.then((resultProducts) => {
         if(category){
+            setProducts([])
             resultProducts.filter(resultProduct => {
                 if(resultProduct.category === category) {
                     setProducts(products => [...products, resultProduct])
@@ -73,7 +73,7 @@ useEffect(() => {
         }
         
     })
-},[])
+},[category])
 
 
  

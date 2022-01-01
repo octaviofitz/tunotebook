@@ -23,14 +23,21 @@ function ItemDetail({data}) {
 
   const agregarCart= (value) => {
     console.log('Item agregados: ', value)
+    if (value >= 1)
     itemCart.cantidad= value
   }
   
   const enviarProducto = () => {
-    addProducts(itemCart)
-    console.log("Producto: ", itemCart);
+    if (itemCart.cantidad >= 1){
+      addProducts(itemCart)
+    } else{
+      console.log("Producto: ", itemCart);
+    }
+    
+    
   }
 
+ 
 
     return (
       <>
@@ -48,10 +55,13 @@ function ItemDetail({data}) {
 
           <h5 className="detail-stock">Stock: {data.stock}</h5>
 
-        <Button variant="outlined" size="small" id="addCartDetail" style={{borderRadius: '2px'}} onClick={enviarProducto}>Añadir al carrito</Button> 
+       {itemCart.cantidad >= 0 ? <Button variant="outlined" size="small" id="addCartDetail" style={{borderRadius: '2px'}} onClick={enviarProducto}>Añadir al carrito</Button> : <></> } 
 
-        {itemCart.cantidad===0? <></> : 
-       <Link to='/carrito'><Button variant="outlined" size="small" id="addCartDetail" style={{borderRadius: '2px'}}>Finalizar compra</Button> </Link>
+        {itemCart.cantidad >= 1
+         ?
+         <Link to='/carrito'><Button variant="outlined" size="small" id="addCartDetail" style={{borderRadius: '2px'}}>Finalizar compra</Button> </Link> 
+         : 
+         <></>
          }
           </div>
           </div>

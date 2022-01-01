@@ -1,6 +1,6 @@
 import { CircularProgress } from '@mui/material'
 import Item from '../Item/Item'
-import '../ItemList/itemList.css'
+import '../ItemList/ItemList.css'
 
 
 function ItemList({data, loader}) {

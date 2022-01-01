@@ -24,11 +24,6 @@ const CartProvider = ({children}) => {
         }
       };
 
-      const limpiarCarrito = () => {
-        setProducts([]);
-        console.log('listado de productos LIMPIAR CARRITO', setProducts);
-      };
-
     const data = {
         products,
         addProducts,
