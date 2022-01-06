@@ -1,4 +1,3 @@
-
     .containerTotalDetalle{
         background-color: #F8F8F8;
         border-radius: 1rem;
@@ -20,8 +19,7 @@
         width: 75vw;
         max-width: 500px;
         display: flex;
-        margin: auto;
-        
+        margin: auto; 
     }
     
     .containerDataDetail{
@@ -150,5 +148,53 @@
 }
 
 @media (min-width: 1024px) {
+
+    .containerTotalDetalle{
+        margin: 6rem 6rem;
+        padding: 1rem 0rem;
+        border-radius: 3px;
+    }
+
+    .detail-product{   
+        justify-content: baseline;
+    }
+
+    .img-detalle{
+        width: 100%;
+        max-width: 400px;        
+    }
+
+    .detail-price{
+        font-weight: 400;
+        font-size: 2.5vw;
+    }
+
+    .detail-envio{
+        font-size: 1.5vw;
+    }
+    
+    .detail-stock{
+        font-size: 1.3rem;
+    }
+     
+
+ #addCartDetail{
+        margin-top: 1.2rem;
+        font-size: 1.3vw;
+    }
+    
+
+.titleDescription,
+.detailDescription{
+    font-size: 1.8vw;
+    padding-top: 3rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    }
+
+.detailDescription{
+    padding-bottom: 3rem;
+    font-size: 1.4vw;
+}
 
 }

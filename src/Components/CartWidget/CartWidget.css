@@ -46,6 +46,7 @@
 .img-cart-widget{
     width: 130px;
     height: 95px;
+    margin-left: -1rem;
 }
 
 .name-cart-widget,
