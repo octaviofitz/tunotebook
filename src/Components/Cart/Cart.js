@@ -1,4 +1,3 @@
-import { createContext, useState} from "react";
 import { Link } from 'react-router-dom'
 import '../Cart/cart.css'
 import { Button } from '@mui/material';
@@ -11,19 +10,18 @@ function Cart() {
   const {setProducts } = useContext(CartContext);
 
 
-  console.log('productos agregados al carrito:', products);
-
-
   const LimpiarCarrito = () => {
     setProducts([]);
   };
 
   const eliminarItem = (event) => { 
     const deleted = products.filter(
-      (product) => product.id !== parseInt(event.target.id)
+      (product) => product.id !== event.target.id,
     );
     setProducts(deleted);
   };
+
+  console.log(products);
 
     return (
      <>
@@ -49,7 +47,6 @@ function Cart() {
              </div>
              <div className='eliminar-cart'>
                <p className='data-compra'>Eliminar: </p>
-               {/* <p className="x-eliminar-cart" onClick={eliminarItem}>X</p> */}
                <button id={product.id} className="x-eliminar-cart" onClick={eliminarItem}>X</button>
              </div>
              <div className='productPrice-cart'>
