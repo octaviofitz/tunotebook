@@ -15,14 +15,16 @@ function ItemCount({data, agregarCart}) {
     }
 
     const onRemove = () => {
-        if (itemCount <= 1 ) {
+         if (itemCount <= 1 ) {
           setItemCount(itemCount)
         } else{
           setItemCount(itemCount -1)
-        }
+        } 
+        
     }
  
- 
+   
+
   return (
     <>
 

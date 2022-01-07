@@ -21,6 +21,9 @@ function Cart() {
     setProducts(deleted);
   };
 
+  const totalPrice = products.reduce((a, b) => a + b.price * b.cantidad, 0);
+
+
     return (
      <>
           <h3 className='cartTitle'>Carrito de compras</h3>
@@ -67,7 +70,7 @@ function Cart() {
              <p onClick={LimpiarCarrito} className='limpiarCart'>Limpiar carrito</p>
                </div> 
                <div>
-          <p className='total-price-cart'>Total: $ </p>
+          <p className='total-price-cart'>Total: ${totalPrice} </p>
           </div>
           </div>
           :

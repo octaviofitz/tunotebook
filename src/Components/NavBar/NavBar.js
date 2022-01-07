@@ -18,6 +18,7 @@ function NavBar() {
                <ul className='menu-vertical'>
                 <Link to='/marcas/dell'><li>Dell</li></Link>
                 <Link to='/marcas/lenovo'><li>Lenovo</li></Link>
+                <Link to='/marcas/hp'><li>HP</li></Link>
                   </ul>
                </li> 
                <Link to='/nosotros'> <li className="listado"><span>Nosotros</span></li> </Link>

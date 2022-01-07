@@ -5,10 +5,15 @@
     
 } 
 
-.containerPrueba{
+.containerItemsGeneral{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 0rem 3rem;
+}
+
+.containerItems{
+    margin:0rem 1rem;
 }
 
 .itemOculto{

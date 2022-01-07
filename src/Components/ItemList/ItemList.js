@@ -9,10 +9,10 @@ function ItemList({data, loader}) {
     <>
 
       { loader ? <CircularProgress id="loader" color='success' /> :
-           <div className="containerPrueba">
+           <div className="containerItemsGeneral">
            {data.map(product => {
               return(
-                  <div>
+                  <div className='containerItems'>
                 { <Item key={product.id} data={product} /> }
                 
                 </div>

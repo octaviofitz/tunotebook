@@ -22,18 +22,16 @@ function ItemDetail({data}) {
 
 
   const agregarCart= (value) => {
-    console.log('Item agregados: ', value)
     if (value >= 1)
-    itemCart.cantidad= value
+    itemCart.cantidad= value 
   }
+
   
   const enviarProducto = () => {
     if (itemCart.cantidad >= 1){
       addProducts(itemCart)
     } 
   }
-
- 
 
     return (
       <>
@@ -47,7 +45,7 @@ function ItemDetail({data}) {
           <h3 className="detail-price">${data.price}</h3>
           <h3 className="detail-envio">Envío 100% bonificado</h3>
 
-          <ItemCount data={data.stock} agregarCart={agregarCart}/>
+          <ItemCount data={data.stock} agregarCart={agregarCart} /* quitarCart={quitarCart} *//>
 
           <h5 className="detail-stock">Stock: {data.stock}</h5>
 

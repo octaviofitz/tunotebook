@@ -5,6 +5,8 @@ const CartProvider = ({children}) => {
     
     const [products, setProducts] = useState([])
 
+
+
     const addProducts = (product) => {
         const exist = products.find((x) => x.id === product.id)
         if (exist) {
