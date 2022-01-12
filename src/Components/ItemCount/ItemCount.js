@@ -18,9 +18,8 @@ function ItemCount({data, agregarCart}) {
          if (itemCount <= 1 ) {
           setItemCount(itemCount)
         } else{
-          setItemCount(itemCount -1)
-        } 
-        
+          setItemCount(itemCount -1)      
+        }         
     }
  
    

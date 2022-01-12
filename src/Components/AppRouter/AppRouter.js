@@ -9,7 +9,10 @@ import ProductDetailPage from '../../pages/ProductDetail/ProductDetailPage';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage'
 import CategoriesPages from '../../pages/CategoriesPages/CategoriesPages';
 import CartPage from '../../pages/CartPage/CartPage'
+import CheckoutPage from '../../pages/CheckoutPage/Checkoutpage'
 import { CartProvider } from '../../context/CartContext.js'
+import CheckOutOrder from '../../pages/CheckoutPage/CheckOutOrder';
+
 
 function AppRouter() {
     return (
@@ -26,7 +29,11 @@ function AppRouter() {
         <Route path='/marcas/:category' element={<CategoriesPages />} />
         <Route path='/contacto' element={<ContactPage />} />
         <Route path='/nosotros' element={<AboutPage />} />
-        <Route path='/carrito' element={<CartPage />} /> 
+        <Route path='/carrito' element={<CartPage />} />
+        <Route path='/checkout' element={<CheckoutPage />}  />
+        <Route path='/checkout/order' element={<CheckOutOrder />}  />
+
+        
 
         <Route path='*' element={<NotFoundPage />} />
  

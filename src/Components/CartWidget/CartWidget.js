@@ -37,7 +37,8 @@ function CartWidget() {
                 <img src={`../assets/${product.img}`} className='img-cart-widget' />
                 </div>
               <div>
-                <span className='nombre-PROD' className='name-cart-widget'>{product.name}</span>
+                <span className='name-cart-widget'>{product.name}
+                </span>
                 </div>
               <div>
                 <span className='cantidad-cart-widget'><b>Cant:</b> {product.cantidad}</span>

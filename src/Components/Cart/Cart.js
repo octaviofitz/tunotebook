@@ -8,6 +8,7 @@ function Cart() {
 
   const {products} = useContext(CartContext)
   const {setProducts } = useContext(CartContext);
+  const {totalPrice} = useContext(CartContext)
 
 
   const LimpiarCarrito = () => {
@@ -20,9 +21,6 @@ function Cart() {
     );
     setProducts(deleted);
   };
-
-  const totalPrice = products.reduce((a, b) => a + b.price * b.cantidad, 0);
-
 
     return (
      <>
@@ -53,7 +51,7 @@ function Cart() {
                <button id={product.id} className="x-eliminar-cart" onClick={eliminarItem}>X</button>
              </div>
              <div className='productPrice-cart'>
-             <p className='data-compra'>Precio</p>
+             <p className='data-compra'>Precio unidad</p>
              <p>${product.price}</p>
              <p id={product.id} className="x-eliminar-cart-mobile" onClick={eliminarItem}>Eliminar X</p>
              </div>
@@ -83,7 +81,9 @@ function Cart() {
           ? 
           <div className="botones-Cart">
                {/* <Button onClick={LimpiarCarrito} variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.5rem', marginTop: '1.5rem' }}>Limpiar carrito</Button> */}
-              <Button variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.5rem', marginTop: '1.5rem'}} className='finalizar-cart'>Finalizar compra</Button>
+             <Link to='/checkout'>
+               <Button variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.5rem', marginTop: '1.5rem'}} className='finalizar-cart'>CONTINUAR</Button>
+               </Link>
               </div>
                :
                 <></> 

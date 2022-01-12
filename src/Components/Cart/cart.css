@@ -7,7 +7,7 @@
     text-align: center;
     margin-bottom: 1.2rem;
     text-decoration: underline;
-    color: #212529;
+    color: #8C7A2D;
 }
 
 .container-cart{
@@ -20,12 +20,10 @@
 }
 
 .img-cart{
-/*     height: 60px;
- */    height: 12vh;
+    height: 12vh;
     width: 20vw;
-/*     width: 80px;
- */    margin-top: 1.5rem;
-        margin-right: 1rem;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
 }
 
 .container-data{
@@ -68,7 +66,7 @@
 }
 
 .button-limpiar-cart{
-    background-color: red;
+    background-color: #8C7A2D;
 }
 
 .botones-Cart{
@@ -91,7 +89,7 @@
 
 .limpiarCart{
     text-decoration: underline;
-    color: #212529;
+    color: #8C7A2D;
 }
 
 

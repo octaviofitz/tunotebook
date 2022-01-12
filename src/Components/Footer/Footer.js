@@ -1,4 +1,5 @@
 import '../Footer/footer.css'
+import {Link} from 'react-router-dom'
 
 function Footer() {
     
@@ -20,7 +21,7 @@ function Footer() {
 
       <div className="columnaFooter">
       <h3 className="titleFooter">Enlaces útiles</h3>
-      <p className="datosFooter">Inicio</p>
+      <Link to='/'><p className="datosFooter">Inicio</p></Link>
       <p className="datosFooter">Productos</p>
       {/* <p className="datosFooterDinamicos">Marcas</p>
       <p className="datosFooterDinamicos">Nosotros</p>

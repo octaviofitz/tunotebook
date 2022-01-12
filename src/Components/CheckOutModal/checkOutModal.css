@@ -1,0 +1,10 @@
+.orden-compra-modal,
+.p-modal-checkout,
+.title-checkout-widget{
+    text-align: center;
+}
+
+.p-modal-checkout,
+.title-checkout-widget{
+    font-weight: 700;
+}

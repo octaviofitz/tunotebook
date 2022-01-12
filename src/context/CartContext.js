@@ -4,9 +4,7 @@ const CartContext = createContext();
 const CartProvider = ({children}) => {
     
     const [products, setProducts] = useState([])
-
-
-
+  
     const addProducts = (product) => {
         const exist = products.find((x) => x.id === product.id)
         if (exist) {
@@ -26,11 +24,16 @@ const CartProvider = ({children}) => {
         }
       };
 
+      const totalPrice = products.reduce((a, b) => a + b.price * b.cantidad, 0);
+
+
     const data = {
         products,
         addProducts,
-        setProducts
+        setProducts,
+        totalPrice,
     }
+
 
     return(
         <CartContext.Provider value={data} >
