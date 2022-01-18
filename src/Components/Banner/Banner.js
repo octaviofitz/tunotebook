@@ -1,3 +1,4 @@
+//styles
 import '../Banner/banner.css'
 
 function Banner() {

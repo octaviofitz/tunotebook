@@ -1,5 +1,7 @@
+//react
 import React, { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
+//components
 import ItemList from '../ItemList/ItemList'
 //firebase
 import db from '../../firebase'
@@ -32,13 +34,13 @@ useEffect(() => {
             resultProducts.filter(resultProduct => {
                 if(resultProduct.category === category) {
                     setProducts(products => [...products, resultProduct])
-                    setLoader(false)
+                    setLoader(false)                   
                 }
+                return false
             })
         }
         else {
             setProducts(resultProducts)
-            //ocultar loader
             setLoader(false)
         }
         
@@ -46,11 +48,10 @@ useEffect(() => {
 },[category])
 
 
- 
   return (
-    <>          
-             <ItemList key={products.id} data={products} loader={loader}/>   
-      </>
+    <div key={products.id}>          
+             <ItemList data={products} loader={loader}/>   
+      </div>
   )
     }
    

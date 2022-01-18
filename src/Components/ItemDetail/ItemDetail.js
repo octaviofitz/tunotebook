@@ -1,7 +1,11 @@
+//react
 import { Link } from 'react-router-dom'
 import React, { useState, useContext } from 'react'
+//styles
 import '../ItemDetail/itemDetail.css'
+//material ui
 import Button from '@mui/material/Button';
+//components
 import ItemCount from '../ItemCount/ItemCount';
 import CartContext from '../../context/CartContext';
 
@@ -10,7 +14,7 @@ function ItemDetail({data}) {
 
     //creo Objeto para guardar la compra
 
-  const [itemCart, setItemCart] = useState({
+  const [itemCart] = useState({
     name: data.name,
     id: data.id,
     price: data.price,
@@ -45,7 +49,7 @@ function ItemDetail({data}) {
           <h3 className="detail-price">${data.price}</h3>
           <h3 className="detail-envio">Envío 100% bonificado</h3>
 
-          <ItemCount data={data.stock} agregarCart={agregarCart} /* quitarCart={quitarCart} *//>
+          <ItemCount data={data.stock} agregarCart={agregarCart} />
 
           <h5 className="detail-stock">Stock: {data.stock}</h5>
 

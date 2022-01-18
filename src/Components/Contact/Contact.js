@@ -1,3 +1,4 @@
+//styles
 import '../Contact/contact.css'
 
 function Contact() {

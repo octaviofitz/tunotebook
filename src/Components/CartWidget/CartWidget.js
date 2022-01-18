@@ -1,16 +1,17 @@
-import { useState, useEffect } from 'react'
+//react
+import { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom';
+//styles
 import '../CartWidget/CartWidget.css'
+//material ui
 import Button from '@mui/material/Button';
 //context
 import CartContext from '../../context/CartContext'
-import {useContext} from "react";
 
 
 function CartWidget() {
 
   const {products} = useContext(CartContext)
-
 
   const [mostrarCarrito, setMostrarCarrito ] = useState(false)
   useEffect(() => {
@@ -18,7 +19,6 @@ function CartWidget() {
 
   const abrirCarrito = () => {
       setMostrarCarrito(!mostrarCarrito)
-      /* console.log('productos del context:', products); */
   }
 
  
@@ -32,9 +32,9 @@ function CartWidget() {
           {products.length === 0 ? <p className='cart-vacio-widget'>Carrito vacío</p>: <></>}
         {mostrarCarrito ?  products.map((product)=> {
           return(       
-            <div className='container-widget-cart'>
+            <div className='container-widget-cart' key={product.id}>
               <div>
-                <img src={`../assets/${product.img}`} className='img-cart-widget' />
+                <img src={`../assets/${product.img}`} className='img-cart-widget' alt={product.name}/>
                 </div>
               <div>
                 <span className='name-cart-widget'>{product.name}
@@ -49,7 +49,13 @@ function CartWidget() {
         
   )  : <></>
 }           
-            {products.length === 0 ? <></>: <Link to='/carrito'><Button variant="outlined" size="small" id="addCartDetailWidget" className='boton-cart-widget'  style={{borderRadius: '2px', color: 'white', backgroundColor: '#8C7A2D', border: 'none'}} >Carrito</Button></Link>}
+            {products.length === 0 
+            ? 
+            <></>
+            : 
+            <Link to='/carrito'>
+              <Button variant="outlined" size="small" id="addCartDetailWidget" className='boton-cart-widget' style={{borderRadius: '2px', color: 'white', backgroundColor: '#8C7A2D', border: 'none'}} >Carrito</Button>
+              </Link>}
          
 
 </div>

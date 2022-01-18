@@ -1,6 +1,9 @@
-import React, { useState, useEffect} from 'react'
+//react
+import { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
+//material ui
 import { CircularProgress } from '@mui/material'
+//components
 import ItemDetail from '../ItemDetail/ItemDetail'
 //firebase
 import db from '../../firebase'
@@ -12,8 +15,7 @@ function ItemDetailContainer() {
     const [loader, setLoader] = useState(true)
     const { id } = useParams()
 
-
-    async function getProduct(db) {
+     async function getProduct(db) {
         const docRef= doc(db, 'productos', id);
         const docSnap= await getDoc(docRef);
         if (docSnap.exists()) {
@@ -21,17 +23,13 @@ function ItemDetailContainer() {
             product.id= docSnap.id;
             setProduct(product)
             setLoader(false)
-        } else {
-            console.log('No such document');
-        }
+        } 
     }
-
 
     useEffect(() => {
             getProduct(db)
-    },[id])
-
-
+    },[id]) //eslint-disable-line react-hooks/exhaustive-deps
+ 
     return (
       <>
             { loader ? <CircularProgress id="loader" color='success' /> :

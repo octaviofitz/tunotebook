@@ -1,3 +1,4 @@
+//styles
 import '../NotFound/notFound.css'
 
 function NavBar() {

@@ -1,5 +1,8 @@
+//react
 import React, {useState} from 'react'
+//css
 import '../ItemCount/ItemCount.css'
+//material ui
 import Button from '@mui/material/Button';
 
 function ItemCount({data, agregarCart}) {
@@ -22,7 +25,6 @@ function ItemCount({data, agregarCart}) {
         }         
     }
  
-   
 
   return (
     <>

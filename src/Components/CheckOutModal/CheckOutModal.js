@@ -1,5 +1,9 @@
+//react
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+//styles
+import '../CheckOutModal/checkOutModal.css'
+//material ui
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
@@ -9,8 +13,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-//css
-import '../CheckOutModal/checkOutModal.css'
+
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -54,9 +57,7 @@ BootstrapDialogTitle.propTypes = {
 export default function CheckOutModal({orden}) {
   const [open, setOpen] = React.useState(true);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -68,16 +69,16 @@ export default function CheckOutModal({orden}) {
       aria-labelledby="customized-dialog-title"
       open={open}
     >
-      <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-          <h3 className='title-checkout-widget'>¡COMPRA EXITOSA!</h3>
+      <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose} className='title-checkout-widget'>
+          ¡COMPRA EXITOSA!
       </BootstrapDialogTitle>
       <DialogContent dividers>
-        <p>
+        
        <p className='orden-compra-modal'>Su orden de compra es: {orden}</p>
-        </p>
-        <p>
+        
+        
           <p className='p-modal-checkout'>Gracias por adquirir nuestros productos.</p>
-        </p>
+        
       </DialogContent>
       <DialogActions>
         <Link to='/'>

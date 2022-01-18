@@ -1,9 +1,11 @@
-import { CircularProgress } from '@mui/material'
-import Item from '../Item/Item'
+//styles
 import '../ItemList/ItemList.css'
+//material ui
+import { CircularProgress } from '@mui/material'
+//components
+import Item from '../Item/Item'
 
-
-function ItemList({data, loader}) {
+function ItemList({data, loader, key}) {
 
   return (
     <>
@@ -12,8 +14,8 @@ function ItemList({data, loader}) {
            <div className="containerItemsGeneral">
            {data.map(product => {
               return(
-                  <div className='containerItems'>
-                { <Item key={product.id} data={product} /> }
+                  <div className='containerItems' key={product.id}>
+                { <Item data={product} /> }
                 
                 </div>
               )

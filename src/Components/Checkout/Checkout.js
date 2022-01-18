@@ -1,28 +1,26 @@
-import '../Checkout/checkout.css'
+//react
 import {useState, useContext} from 'react'
 import {Link} from 'react-router-dom'
+//styles
+import '../Checkout/checkout.css'
 //components
 import CheckOutModal from '../CheckOutModal/CheckOutModal'
 import CartContext from '../../context/CartContext'
-import CheckOutOrder from '../../pages/CheckoutPage/CheckOutOrder'
 //material ui
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Dialog } from '@mui/material'
 //firebase
 import db from '../../firebase'
 import { collection, addDoc } from 'firebase/firestore'
 
 function Checkout() {
 
-
    const [orderId, setOrderId]= useState() 
    const [open, setOpen] = useState(false);
 
   
-  const {products} = useContext(CartContext)
-  const {totalPrice} = useContext(CartContext)
+  const {products, totalPrice} = useContext(CartContext)
   
    const [formData, setFormData]= useState(
     {
@@ -31,10 +29,6 @@ function Checkout() {
       mail: ''
     }
   ) 
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
 
   const handleClose = () => {
     setOpen(false);
@@ -50,7 +44,6 @@ function Checkout() {
     order.buyer= formData;
     order.items= products;
     order.total= totalPrice;
-    console.log('enviar orden: ', order)
     pushOrder(order) 
   } 
 
@@ -58,7 +51,6 @@ function Checkout() {
     const orderFirebase= collection(db, 'ordenes')
     const orden= await addDoc(orderFirebase, order)
     setOrderId(orden.id)
-    console.log('id compra: ', orden.id)
   } 
  
   return (
@@ -88,7 +80,7 @@ function Checkout() {
       <TextField id="outlined-basic" label="Correo electrónico" name='mail' variant="outlined" color='success' value={formData.mail} onChange={handleChange}/>
       <TextField id="outlined-basic" label="Teléfono" name='phone' variant="outlined" color='success' value={formData.phone} onChange={handleChange}/>
 
-     {/* <Link to='/checkout/order'> */}<Button variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.2rem', marginTop: '2rem'}} className='finalizar-cart' onClick={sendOrder}>Finalizar compra</Button> {/* </Link>  */} 
+     <Button variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.2rem', marginTop: '2rem'}} className='finalizar-cart' onClick={sendOrder}>Finalizar compra</Button>
      
 
       <Link to='/carrito'><p className='backCart'>Volver al carrito</p></Link>
@@ -98,7 +90,6 @@ function Checkout() {
 }
           </div>
          
-
   );
 }
 

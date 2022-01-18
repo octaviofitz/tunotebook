@@ -1,9 +1,10 @@
-import '../Footer/footer.css'
+//react
 import {Link} from 'react-router-dom'
+//styles
+import '../Footer/footer.css'
 
 function Footer() {
     
-
     return (
       <div className="footer">
 
@@ -23,9 +24,6 @@ function Footer() {
       <h3 className="titleFooter">Enlaces útiles</h3>
       <Link to='/'><p className="datosFooter">Inicio</p></Link>
       <p className="datosFooter">Productos</p>
-      {/* <p className="datosFooterDinamicos">Marcas</p>
-      <p className="datosFooterDinamicos">Nosotros</p>
-      <p className="datosFooterDinamicos">Contacto</p> */}
       
       </div>
 

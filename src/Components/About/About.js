@@ -1,3 +1,4 @@
+//styles
 import './about.css'
 
 function About() {

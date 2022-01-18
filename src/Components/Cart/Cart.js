@@ -1,16 +1,18 @@
+//react
 import { Link } from 'react-router-dom'
-import '../Cart/cart.css'
-import { Button } from '@mui/material';
+//context
 import CartContext from '../../context/CartContext'
 import {useContext} from "react";
+//styles
+import '../Cart/cart.css'
+//material ui
+import { Button } from '@mui/material';
+
 
 function Cart() {
 
-  const {products} = useContext(CartContext)
-  const {setProducts } = useContext(CartContext);
-  const {totalPrice} = useContext(CartContext)
-
-
+  const {products, setProducts, totalPrice} = useContext(CartContext);
+  
   const LimpiarCarrito = () => {
     setProducts([]);
   };
@@ -31,7 +33,7 @@ function Cart() {
         <div className='Container-Carrito'>
         {products.map((product)=> {
           return(
-            <div className='container-cart'>
+            <div className='container-cart' key={product.id}>
               <div className='container-imagen'>
               <div>
              <img src={`../assets/${product.img}`} className='img-cart' alt='{product.name}' />
@@ -80,7 +82,7 @@ function Cart() {
           products.length>0 
           ? 
           <div className="botones-Cart">
-               {/* <Button onClick={LimpiarCarrito} variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.5rem', marginTop: '1.5rem' }}>Limpiar carrito</Button> */}
+              
              <Link to='/checkout'>
                <Button variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.5rem', marginTop: '1.5rem'}} className='finalizar-cart'>CONTINUAR</Button>
                </Link>
