@@ -1,10 +1,60 @@
-.about-banner{
-    background-size: contain;
-    width: 100%;
+.container-about{
+    display: flex;
+    flex-direction: column;
 }
 
+.container-data-about{
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    margin: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 10px;
+    background-color: #F8F8F8;
+}
+.container-about{
+    align-items: center;
+}
+
+.title-about{
+    font-size: 9vw;
+    font-weight: 700;
+}
+
+.data-about{
+    text-align: center;
+}
+
+.map-about{
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 10px;
+    width: 80vw;
+    height: 300px;
+}
+
+
+
+
 @media (min-width: 768px){
-    .about-banner{
-        height: 30vh;
+
+
+
+}
+
+@media (min-width: 1024px) {
+
+    .container-about{
+        flex-direction: row;
         }
+        
+    .container-about{
+        margin: 4rem 0px;
+    }
+    
+    .map-about{
+    width: 45vw;
+    height: 500px;
+}
+
 }
