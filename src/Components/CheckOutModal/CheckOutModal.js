@@ -1,8 +1,10 @@
 //react
-import * as React from 'react';
 import { Link } from 'react-router-dom';
+import React, {useContext} from "react";
 //styles
 import '../CheckOutModal/checkOutModal.css'
+//components
+import CartContext from '../../context/CartContext'
 //material ui
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
@@ -60,8 +62,11 @@ export default function CheckOutModal({orden}) {
 
   const handleClose = () => {
     setOpen(false);
+    setProducts([]);
   };
 
+  const {setProducts} = useContext(CartContext);
+ 
   return (
     <div>
     <BootstrapDialog
@@ -88,6 +93,9 @@ export default function CheckOutModal({orden}) {
         </Link>
       </DialogActions>
     </BootstrapDialog>
-    </div>
+
+          <h3 className='cartTitle-checkout'>¡Gracias por confiar en nosotros!</h3>
+          <Link to='/'><p className="seguir-comprando-checkout">Seguir comprando</p></Link>
+              </div>
   );
 }

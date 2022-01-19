@@ -78,7 +78,7 @@ function Checkout() {
               
       <TextField id="outlined-basic" label="Nombre y apellido" name='name' variant="outlined" color='success' size='string' value={formData.name} onChange={handleChange} />
       <TextField id="outlined-basic" label="Correo electrónico" name='mail' variant="outlined" color='success' value={formData.mail} onChange={handleChange}/>
-      <TextField id="outlined-basic" label="Teléfono" name='phone' variant="outlined" color='success' value={formData.phone} onChange={handleChange}/>
+      <TextField id="outlined-basic" label="Teléfono" name='phone' type='number' variant="outlined" color='success' value={formData.phone} onChange={handleChange}/>
 
      <Button variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.2rem', marginTop: '2rem'}} className='finalizar-cart' onClick={sendOrder}>Finalizar compra</Button>
      

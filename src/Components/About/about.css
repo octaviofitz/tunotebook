@@ -1,4 +1,10 @@
-.aboutTitle{
-    text-align: center;
-    margin: 10rem 0rem;
+.about-banner{
+    background-size: contain;
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    .about-banner{
+        height: 30vh;
+        }
 }

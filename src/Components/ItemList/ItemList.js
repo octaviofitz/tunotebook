@@ -14,7 +14,7 @@ function ItemList({data, loader, key}) {
            <div className="containerItemsGeneral">
            {data.map(product => {
               return(
-                  <div className='containerItems' key={product.id}>
+                  <div className='containerItems' key={product.id}>  
                 { <Item data={product} /> }
                 
                 </div>

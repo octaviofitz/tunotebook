@@ -4,6 +4,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #FDFDFD;
+  /* background: url("logo-notebook.svg");
+  background-position: 100vw;
+  opacity: 0.9; */
 }
 
 

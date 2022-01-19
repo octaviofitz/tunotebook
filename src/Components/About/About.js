@@ -1,11 +1,13 @@
 //styles
 import './about.css'
+//components
+import BannerIMG from '../Banner/BannerIMG/BannerIMG'
 
 function About() {
     return (
-        <>  
-        <h2 className='aboutTitle'>About Page</h2>
-        </>
+        <section>  
+        <BannerIMG />
+        </section>
        )
      }
      

@@ -1,8 +1,11 @@
+//styles
+import '../ItemListContainer/itemListContainer.css'
 //react
 import React, { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 //components
 import ItemList from '../ItemList/ItemList'
+import BannerIMG from '../Banner/BannerIMG/BannerIMG'
 //firebase
 import db from '../../firebase'
 import { collection, getDocs } from 'firebase/firestore';
@@ -49,9 +52,27 @@ useEffect(() => {
 
 
   return (
-    <div key={products.id}>          
-             <ItemList data={products} loader={loader}/>   
+      <div>  
+            <BannerIMG />
+    <div key={products.id}> 
+
+    {
+    products.category
+    !==
+    category 
+    ? 
+    <h1 className='title-main'>Productos {category}</h1> 
+    : 
+    <h1 className='title-main'>Productos Destacados</h1>
+    }
+
+             <ItemList data={products} loader={loader}
+             
+             />   
       </div>
+      </div>
+
+     
   )
     }
    
