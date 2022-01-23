@@ -65,7 +65,6 @@ useEffect(() => {
     : 
     <h1 className='title-main'>Productos Destacados</h1>
     }
-
              <ItemList data={products} loader={loader}
              
              />   

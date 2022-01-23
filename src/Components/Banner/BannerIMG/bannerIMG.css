@@ -1,4 +1,16 @@
 .img-banner{
     background-size: cover;
     width: 100%;
+    animation: bannerAnimacion 3s ease;
+}
+
+@keyframes bannerAnimacion {
+    
+    from{
+        opacity: 0.2;
+    }
+
+    to{
+        opacity: 1;
+    }
 }

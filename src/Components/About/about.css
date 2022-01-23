@@ -1,6 +1,18 @@
 .container-about{
     display: flex;
     flex-direction: column;
+    animation: aboutAnimacion 4s ease;
+}
+
+@keyframes aboutAnimacion {
+    
+    from{
+        opacity: 0.2;
+    }
+
+    to{
+        opacity: 1;
+    }
 }
 
 .container-data-about{
@@ -11,6 +23,7 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     border-radius: 10px;
     background-color: #F8F8F8;
+    padding: 1rem;
 }
 .container-about{
     align-items: center;
@@ -25,20 +38,22 @@
     text-align: center;
 }
 
-.map-about{
-    margin: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-    border-radius: 10px;
-    width: 80vw;
-    height: 300px;
+.container-image-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.localDesktop{
+    border-radius: 10px;
+    width: 85%;
+}
 
+@media (min-width: 720px) {
 
-
-@media (min-width: 768px){
-
-
+    .title-about{
+        font-size: 6vw;
+    }
 
 }
 
@@ -46,15 +61,43 @@
 
     .container-about{
         flex-direction: row;
-        }
-        
-    .container-about{
-        margin: 4rem 0px;
+        margin: 4rem 5rem;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        border-radius: 10px;
+        padding: 0 0rem;
+        background-color: #F8F8F8;
     }
     
-    .map-about{
-    width: 45vw;
-    height: 500px;
+
+    .container-data-about{
+        width: 45%;
+        align-items: center;
+        text-align: center;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    .title-about{
+        font-size: 4vw;
+        font-weight: 700;
+    }
+    
+    .data-about{
+        font-size: 0.7rem;
+    }
+
+    .container-image-about{
+        width: 45%;
+    }
 }
 
+@media (min-width: 1280px) {
+    .data-about{
+        font-size: 1rem;
+    }
+
+    .localDesktop{
+        height: 300px;
+        width: 85%;
+    }
 }

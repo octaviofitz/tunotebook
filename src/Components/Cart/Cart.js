@@ -15,15 +15,17 @@ function Cart() {
   
   const LimpiarCarrito = () => {
     setProducts([]);
+    localStorage.clear()
   };
 
-  const eliminarItem = (event) => { 
+  const eliminarItem = (event, product) => { 
     const deleted = products.filter(
       (product) => product.id !== event.target.id,
-    );
-    setProducts(deleted);
-  };
-
+    )
+    setProducts(deleted)
+  }
+  ;
+               
     return (
      <>
           <h3 className='cartTitle'>Carrito de compras</h3>
@@ -63,9 +65,11 @@ function Cart() {
             
           )
         })}
+        
         {
           products.length>0 
-          ? <div className='price-limpiar-container'>
+          ? 
+          <div className='price-limpiar-container'>
              <div>
              <p onClick={LimpiarCarrito} className='limpiarCart'>Limpiar carrito</p>
                </div> 
@@ -96,5 +100,6 @@ function Cart() {
         </>
     )
   }
+
   
   export default Cart;

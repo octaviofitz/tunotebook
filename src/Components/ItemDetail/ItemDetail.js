@@ -39,6 +39,16 @@ function ItemDetail({data}) {
 
     return (
       <>
+      <div className='boton-back-detail'>
+      <div>
+      <Button variant="contained" id="backHome"
+       style={{color: 'white', backgroundColor: '#8C7A2D', marginBottom: '0.3rem', padding: '0.2rem'}} 
+       ><Link to='/'><i className="fas fa-long-arrow-alt-left"></i></Link></Button>
+        </div>
+        <div>
+        <></>
+        </div>
+        </div>
         <div className="containerTotalDetalle">
           <div className="detail-product">
             <div className="containerImgDetail">

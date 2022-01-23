@@ -156,10 +156,9 @@
     .container-cart{
         display: flex;
         justify-content: space-around;
-        margin-right:1.5rem;
-        margin-left: 1.5rem;
-        margin-bottom: 3rem;  
+        margin: 0 10rem 3rem 10rem ;
     }
+    
     
     .img-cart{
         height: 200px;

@@ -7,7 +7,7 @@ import CartWidget from '../CartWidget/CartWidget';
 
 function NavBar() {
   return (
-    <>
+    <header>
     <div className='container-header'>
     <div className="header">
        
@@ -40,6 +40,8 @@ function NavBar() {
                <ul className='menu-vertical-Mobile'>
                 <Link to='/marcas/dell'><li>Dell</li></Link>
                 <Link to='/marcas/lenovo'><li>Lenovo</li></Link>
+                <Link to='/marcas/hp'><li>HP</li></Link>
+
                   </ul>
                </li> 
                <Link to='/nosotros'> <li className="listadoMobile"><span>Nosotros</span></li> </Link>
@@ -47,7 +49,7 @@ function NavBar() {
       </ul>
       </div>
       </div>
-    </>
+    </header>
   );
 }
 

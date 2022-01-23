@@ -1,7 +1,9 @@
 .title-main{
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
+    color: #0F2E20;
     text-transform: uppercase;
-    margin-top: 4rem;
+    margin: 4rem 1rem 1rem 1rem;
     font-family: 'Mulish', sans-serif;
 }
+
