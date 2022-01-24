@@ -9,6 +9,8 @@ import Button from '@mui/material/Button';
 //firebase
 import db from '../../firebase'
 import { collection, addDoc } from 'firebase/firestore'
+//validator 
+import validator from 'validator';
 
 function Contact() {
 
@@ -29,12 +31,35 @@ function Contact() {
 }
 
 
+//validaciones
+const [errorFormulario, setErrorFormulario] = useState(false);
+const [leyenda, setLeyenda] = useState('')
 
- const sendFormContact = () => {
-   let contacto= {}
-   contacto.usuario= formContact;
-   pushFormContact(contacto) 
- } 
+const handleSetOrder = async () => {
+  //Primero validamos campos del Formulario
+  const { name, phone, mail, msg } = formContact;
+  const nameValidate = validator.isLength(name, {min: 3});
+  const mailValidate = validator.isEmail(mail);
+  const phoneValidate = validator.isNumeric(phone, {no_symbols: false})
+  const msgValidate = validator.isLength(msg, {max:500, min:20});
+
+  if( !nameValidate || !mailValidate || !phoneValidate || !msgValidate ) {
+      //Error si no se completa correctamente los campos del formulario
+      setErrorFormulario(true);
+      setTimeout(() => {
+          setErrorFormulario(false)
+          setLeyenda('Revise que los campos del formulario estén correctos. Su mensaje debe tener entre 20 y 500 caracteres.')
+      }, 1000);
+      return;
+  };
+
+    let contacto= {}
+    setLeyenda('')
+    contacto.usuario= formContact;
+    pushFormContact(contacto)
+}
+
+ 
 
    const pushFormContact= async(contacto) => {
    const orderFirebase= collection(db, 'formularioContacto')
@@ -67,17 +92,26 @@ function Contact() {
       <TextField id="outlined-basic" label="Teléfono" name='phone' type='number' variant="outlined" color='success' value={formContact.phone} onChange={handleChange}/>
       
       <TextField
-          id="outlined-multiline-flexible"
+          id="outlined-multiline-flexible-helper-text"
+
           label="Mensaje"
           name='msg'
           color='success'
           value={formContact.msg}
           multiline
+          error={errorFormulario}
+          helperText={leyenda}
           maxRows={8}
           onChange={handleChange}
         />
 
-      <Button variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.2rem', marginTop: '2rem'}} className='finalizar-cart' onClick={sendFormContact}>Enviar</Button>
+      <Button
+       variant='contained'
+       style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.2rem', marginTop: '2rem'}}
+        className='finalizar-cart'
+         onClick={handleSetOrder}>
+           Enviar
+           </Button>
 
       {
       orderContacto 

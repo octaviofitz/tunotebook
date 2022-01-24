@@ -4,7 +4,9 @@ const CartContext = createContext();
 const CartProvider = ({children}) => {
     
     const [products, setProducts] = useState(JSON.parse(localStorage.getItem("productos")) || [])
-    const [totalProducts, setTotalProducts] = useState(0)
+    //eslint-disable-next-line
+    const [totalProducts, setTotalProducts] = useState(0) 
+
 
   
     const addProducts = (product) => {
