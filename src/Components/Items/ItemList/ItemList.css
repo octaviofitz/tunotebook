@@ -2,14 +2,13 @@
     display: flex;
     margin: auto;
     margin-top: 3rem;
-    
 } 
 
 .containerItemsGeneral{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 0rem 3rem;
+    margin: 0rem 7rem;
 }
 
 .containerItems{

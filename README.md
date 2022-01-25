@@ -20,12 +20,10 @@ npm install
 npm start
 ``` 
 
-## Puerto: 3000
+## El proyecto corre en el Puerto: 3000
 
 ## Características.
-El objetivo de este proyecto es crear un e-commerce con funcionalidad real. Es
-decir, obtendrá los datos de una base de datos.
-
+El objetivo del curso es crear un e-commerce con funcionalidad real.
 
 ## Tecnologías y herramientas
 
