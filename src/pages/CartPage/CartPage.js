@@ -1,8 +1,7 @@
-import Cart from '../../Components/Cart/Cart'
+import Cart from '../../Components/Carrito/Cart/Cart'
 
 function CartPage() {
 
-    
     return (
       <>
             <Cart /> 

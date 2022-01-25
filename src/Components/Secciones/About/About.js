@@ -1,7 +1,7 @@
 //styles
-import './about.css'
+import '../About/about.css'
 //components
-import BannerIMG from '../Banner/BannerIMG/BannerIMG'
+import BannerIMG from '../../NavBar/Banner/BannerIMG/BannerIMG';
 
 function About() {
 

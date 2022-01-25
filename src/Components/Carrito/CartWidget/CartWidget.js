@@ -2,11 +2,11 @@
 import { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom';
 //styles
-import '../CartWidget/CartWidget.css'
+import '../CartWidget/cartWidget.css'
 //material ui
 import Button from '@mui/material/Button';
 //context
-import CartContext from '../../context/CartContext'
+import CartContext from '../../../context/CartContext'
 
 
 function CartWidget() {
@@ -57,13 +57,9 @@ function CartWidget() {
               <Button variant="outlined" size="small" id="addCartDetailWidget" className='boton-cart-widget' style={{borderRadius: '2px', color: 'white', backgroundColor: '#8C7A2D', border: 'none'}} >Carrito</Button>
               </Link>}
          
-
 </div>
 </i> 
         
-      
-     
-
 </>
   )
 }  

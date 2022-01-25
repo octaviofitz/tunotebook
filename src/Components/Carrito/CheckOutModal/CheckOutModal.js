@@ -4,7 +4,7 @@ import React, {useContext} from "react";
 //styles
 import '../CheckOutModal/checkOutModal.css'
 //components
-import CartContext from '../../context/CartContext'
+import CartContext from '../../../context/CartContext'
 //material ui
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';

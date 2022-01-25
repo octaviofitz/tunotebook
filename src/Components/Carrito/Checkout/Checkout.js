@@ -5,13 +5,13 @@ import {Link} from 'react-router-dom'
 import '../Checkout/checkout.css'
 //components
 import CheckOutModal from '../CheckOutModal/CheckOutModal'
-import CartContext from '../../context/CartContext'
+import CartContext from '../../../context/CartContext'
 //material ui
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 //firebase
-import db from '../../firebase'
+import db from '../../../Firebase/firebase'
 import { collection, addDoc } from 'firebase/firestore'
 //validator 
 import validator from 'validator';

@@ -1,5 +1,5 @@
 //styles
-import '../Banner/banner.css'
+import '../BannerTexto/banner.css'
 
 function Banner() {
   return (

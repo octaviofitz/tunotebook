@@ -1,4 +1,4 @@
-import ItemDetailContainer from "../../Components/ItemDetailContainer/ItemDetailContainer";
+import ItemDetailContainer from "../../Components/Items/ItemDetailContainer/ItemDetailContainer";
 
 function ProductDetailPage() {
     return (

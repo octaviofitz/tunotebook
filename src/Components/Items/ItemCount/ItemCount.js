@@ -1,7 +1,7 @@
 //react
 import React, {useState} from 'react'
 //css
-import '../ItemCount/ItemCount.css'
+import '../ItemCount/itemCount.css'
 //material ui
 import Button from '@mui/material/Button';
 

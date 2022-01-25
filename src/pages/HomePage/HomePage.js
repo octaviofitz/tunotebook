@@ -1,4 +1,4 @@
-import ItemListContainer from "../../Components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "../../Components/Items/ItemListContainer/ItemListContainer";
 
 function HomePage() {
  return (

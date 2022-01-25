@@ -6,8 +6,8 @@ import '../ItemDetail/itemDetail.css'
 //material ui
 import Button from '@mui/material/Button';
 //components
-import ItemCount from '../ItemCount/ItemCount';
-import CartContext from '../../context/CartContext';
+import ItemCount from '../ItemCount/ItemCount'
+import CartContext from '../../../context/CartContext';
 
 
 function ItemDetail({data}) {

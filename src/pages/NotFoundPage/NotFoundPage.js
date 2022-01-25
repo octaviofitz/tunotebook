@@ -1,6 +1,6 @@
-import NotFound from '../../Components/NotFound/NotFound'
+import NotFound from '../../Components/Secciones/NotFound/NotFound'
 
-function NavBar() {
+function NotFoundPage() {
   return (
     <>
             <NotFound />
@@ -8,4 +8,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default NotFoundPage;

@@ -1,4 +1,4 @@
-import CheckOutModal from "../../Components/CheckOutModal/CheckOutModal";
+import CheckOutModal from "../../Components/Carrito/CheckOutModal/CheckOutModal";
 
 function CheckOutOrder() {
   return (

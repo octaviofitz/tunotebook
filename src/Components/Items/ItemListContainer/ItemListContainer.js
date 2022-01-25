@@ -5,9 +5,9 @@ import React, { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 //components
 import ItemList from '../ItemList/ItemList'
-import BannerIMG from '../Banner/BannerIMG/BannerIMG'
+import BannerIMG from '../../NavBar/Banner/BannerIMG/BannerIMG'
 //firebase
-import db from '../../firebase'
+import db from '../../../Firebase/firebase'
 import { collection, getDocs } from 'firebase/firestore';
 
 

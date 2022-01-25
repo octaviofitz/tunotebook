@@ -6,7 +6,7 @@ import { CircularProgress } from '@mui/material'
 //components
 import ItemDetail from '../ItemDetail/ItemDetail'
 //firebase
-import db from '../../firebase'
+import db from '../../../Firebase/firebase'
 import {doc, getDoc} from 'firebase/firestore'
 
 function ItemDetailContainer() {

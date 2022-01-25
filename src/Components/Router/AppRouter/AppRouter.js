@@ -1,20 +1,20 @@
 //react
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 //context
-import { CartProvider } from '../../context/CartContext.js'
+import { CartProvider } from '../../../context/CartContext'
 //components
-import NavBar from '../NavBar/NavBar';
-import Banner from '../Banner/Banner';
-import Footer from '../Footer/Footer';
-import ContactPage from '../../pages/ContactPage/ContactPage'
-import AboutPage from '../../pages/AboutPage/AboutPage'
-import HomePage from '../../pages/HomePage/HomePage'
-import ProductDetailPage from '../../pages/ProductDetail/ProductDetailPage';
-import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage'
-import CategoriesPages from '../../pages/CategoriesPages/CategoriesPages';
-import CartPage from '../../pages/CartPage/CartPage'
-import CheckoutPage from '../../pages/CheckoutPage/Checkoutpage'
-import CheckOutOrder from '../../pages/CheckoutPage/CheckOutOrder';
+import NavBar from '../../NavBar/NavBar/NavBar';
+import Banner from '../../NavBar/Banner/BannerTexto/Banner';
+import Footer from '../../Footer/Footer';
+import ContactPage from '../../../pages/ContactPage/ContactPage'
+import AboutPage from '../../../pages/AboutPage/AboutPage'
+import HomePage from '../../../pages/HomePage/HomePage'
+import ProductDetailPage from '../../../pages/ProductDetail/ProductDetailPage';
+import NotFoundPage from '../../../pages/NotFoundPage/NotFoundPage'
+import CategoriesPages from '../../../pages/CategoriesPages/CategoriesPages';
+import CartPage from '../../../pages/CartPage/CartPage'
+import CheckoutPage from '../../../pages/CheckoutPage/Checkoutpage'
+import CheckOutOrder from '../../../pages/CheckoutPage/CheckOutOrder';
 
 
 function AppRouter() {
