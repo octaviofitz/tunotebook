@@ -37,7 +37,7 @@ const CartProvider = ({children}) => {
       useEffect(() => {
         
         //Actualizamos el localStorage cuando se modificar el carrito
-        localStorage.setItem("productazos", JSON.stringify(products));
+        localStorage.setItem("productos", JSON.stringify(products));
         
         //Obtnemos el total de la cantidad de productos que hay en el carrito
         let totalQuantity = 0;

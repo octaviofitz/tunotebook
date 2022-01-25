@@ -33,7 +33,7 @@ function Contact() {
 
 //validaciones
 const [errorFormulario, setErrorFormulario] = useState(false);
-const [leyenda, setLeyenda] = useState('')
+const [mensaje, setmensaje] = useState('')
 
 const handleSetOrder = async () => {
   //Primero validamos campos del Formulario
@@ -48,13 +48,13 @@ const handleSetOrder = async () => {
       setErrorFormulario(true);
       setTimeout(() => {
           setErrorFormulario(false)
-          setLeyenda('Revise que los campos del formulario estén correctos. Su mensaje debe tener entre 20 y 500 caracteres.')
+          setmensaje('Revise que los campos del formulario estén correctos. Su mensaje debe tener entre 20 y 500 caracteres.')
       }, 1000);
       return;
   };
 
     let contacto= {}
-    setLeyenda('')
+    setmensaje('')
     contacto.usuario= formContact;
     pushFormContact(contacto)
 }
@@ -100,7 +100,7 @@ const handleSetOrder = async () => {
           value={formContact.msg}
           multiline
           error={errorFormulario}
-          helperText={leyenda}
+          helperText={mensaje}
           maxRows={8}
           onChange={handleChange}
         />

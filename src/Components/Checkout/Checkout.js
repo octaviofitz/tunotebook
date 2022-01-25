@@ -13,6 +13,8 @@ import Button from '@mui/material/Button';
 //firebase
 import db from '../../firebase'
 import { collection, addDoc } from 'firebase/firestore'
+//validator 
+import validator from 'validator';
 
 function Checkout() {
 
@@ -39,13 +41,43 @@ function Checkout() {
     setFormData({...formData, [name] : value})
   }
 
-  const sendOrder = () => {
+  //validaciones
+  const [errorFormulario, setErrorFormulario] = useState(false);
+  const [mensaje, setMensaje] = useState('')
+
+  const handleSetOrder = async () => {
+    //Primero validamos campos del Formulario
+    const { name, phone, mail} = formData;
+    const nameValidate = validator.isLength(name, {min: 3});
+    const mailValidate = validator.isEmail(mail);
+    const phoneValidate = validator.isNumeric(phone, {no_symbols: false})
+  
+    if( !nameValidate || !mailValidate || !phoneValidate ) {
+        //Error si no se completa correctamente los campos del formulario
+        setErrorFormulario(true);
+        setTimeout(() => {
+            setErrorFormulario(false)
+            setMensaje('Revise que los campos del formulario estén correctos.')
+        }, 1000);
+        return;
+    };
+    
+    let order= {}
+    setMensaje('')
+    order.buyer= formData;
+    order.items= products;
+    order.total= totalPrice
+    pushOrder(order)
+}
+  
+
+  /* const sendOrder = () => {
     let order= {}
     order.buyer= formData;
     order.items= products;
     order.total= totalPrice;
     pushOrder(order) 
-  } 
+  }  */
 
     const pushOrder= async(order) => {
     const orderFirebase= collection(db, 'ordenes')
@@ -56,7 +88,6 @@ function Checkout() {
   return (
     <div>   
          
-    
         {orderId != null ? <CheckOutModal
       open={open} 
       handleClose={handleClose} 
@@ -78,9 +109,10 @@ function Checkout() {
               
       <TextField id="outlined-basic" label="Nombre y apellido" name='name' variant="outlined" color='success' size='string' value={formData.name} onChange={handleChange} />
       <TextField id="outlined-basic" label="Correo electrónico" name='mail' variant="outlined" color='success' value={formData.mail} onChange={handleChange}/>
-      <TextField id="outlined-basic" label="Teléfono" name='phone' type='number' variant="outlined" color='success' value={formData.phone} onChange={handleChange}/>
+      <TextField id="outlined-basic" label="Teléfono" name='phone' type='number' variant="outlined" color='success' value={formData.phone} onChange={handleChange} error={errorFormulario}
+          helperText={mensaje}/>
 
-     <Button variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.2rem', marginTop: '2rem'}} className='finalizar-cart' onClick={sendOrder}>Finalizar compra</Button>
+     <Button variant='contained' style={{borderRadius: '2px', backgroundColor: '#0F2E20', marginBottom: '1.2rem', marginTop: '2rem'}} className='finalizar-cart' onClick={handleSetOrder}>Finalizar compra</Button>
      
 
       <Link to='/carrito'><p className='backCart'>Volver al carrito</p></Link>

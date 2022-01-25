@@ -31,6 +31,7 @@ function ItemDetail({data}) {
   }
 
   
+
   const enviarProducto = () => {
     if (itemCart.cantidad >= 1){
       addProducts(itemCart)
