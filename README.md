@@ -44,6 +44,6 @@ xxxxx
 
 ## Deploy   
 
-El proyecto fue deployado en la plataforma Vercel y lo pueden encontrar, completamente funcional, en el siguiente link: 
+El proyecto fue deployado en la plataforma Vercel y lo pueden encontrar, completamente funcional, en el siguiente link: (https://tunotebook.vercel.app/)
 
 
