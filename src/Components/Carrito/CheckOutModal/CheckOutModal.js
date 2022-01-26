@@ -81,7 +81,6 @@ export default function CheckOutModal({orden}) {
         
        <p className='orden-compra-modal'>Su orden de compra es: {orden}</p>
         
-        
           <p className='p-modal-checkout'>Gracias por adquirir nuestros productos.</p>
         
       </DialogContent>

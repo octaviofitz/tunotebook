@@ -24,16 +24,12 @@ const CartProvider = ({children}) => {
           );
         } else {
           setProducts([...products, { ...product, cantidad: product.cantidad }]);
-/*           productsStorage(product)
- */        }
+         }
       };
 
       const totalPrice = products.reduce((a, b) => a + b.price * b.cantidad, 0);
 
-      /* const productsStorage= (product) => {
-        localStorage.setItem("productos", JSON.stringify([...products, product]));
-      } */
-
+      
       useEffect(() => {
         
         //Actualizamos el localStorage cuando se modificar el carrito

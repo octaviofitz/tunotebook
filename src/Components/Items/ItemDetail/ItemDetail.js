@@ -24,13 +24,10 @@ function ItemDetail({data}) {
 
   const {addProducts} = useContext(CartContext)
 
-
   const agregarCart= (value) => {
     if (value >= 1)
     itemCart.cantidad= value 
   }
-
-  
 
   const enviarProducto = () => {
     if (itemCart.cantidad >= 1){

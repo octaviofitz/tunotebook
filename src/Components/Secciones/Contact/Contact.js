@@ -36,7 +36,6 @@ const [errorFormulario, setErrorFormulario] = useState(false);
 const [mensaje, setmensaje] = useState('')
 
 const handleSetOrder = async () => {
-  //Primero validamos campos del Formulario
   const { name, phone, mail, msg } = formContact;
   const nameValidate = validator.isLength(name, {min: 3});
   const mailValidate = validator.isEmail(mail);
@@ -44,7 +43,6 @@ const handleSetOrder = async () => {
   const msgValidate = validator.isLength(msg, {max:500, min:20});
 
   if( !nameValidate || !mailValidate || !phoneValidate || !msgValidate ) {
-      //Error si no se completa correctamente los campos del formulario
       setErrorFormulario(true);
       setTimeout(() => {
           setErrorFormulario(false)

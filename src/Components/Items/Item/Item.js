@@ -15,10 +15,8 @@ function Item({data}) {
        <h3 className="titleProduct">{data.name}</h3>
       <p className="priceItem">${data.price}</p>
 
-
       <Button variant="contained" id="addCart"><Link to={`/producto/${data.id}`}>Ver producto</Link></Button>
        
-     
          </div> 
       
       </div>  

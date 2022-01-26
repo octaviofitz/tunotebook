@@ -76,9 +76,3 @@ useEffect(() => {
     }
    
 export default ItemListContainer;
-
-
-
-
-
-  

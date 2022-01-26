@@ -46,7 +46,6 @@ function Checkout() {
   const [mensaje, setMensaje] = useState('')
 
   const handleSetOrder = async () => {
-    //Primero validamos campos del Formulario
     const { name, phone, mail} = formData;
     const nameValidate = validator.isLength(name, {min: 3});
     const mailValidate = validator.isEmail(mail);
@@ -70,14 +69,6 @@ function Checkout() {
     pushOrder(order)
 }
   
-
-  /* const sendOrder = () => {
-    let order= {}
-    order.buyer= formData;
-    order.items= products;
-    order.total= totalPrice;
-    pushOrder(order) 
-  }  */
 
     const pushOrder= async(order) => {
     const orderFirebase= collection(db, 'ordenes')
