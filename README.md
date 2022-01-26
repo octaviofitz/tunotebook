@@ -34,7 +34,7 @@ npm start
 
 ## Gif navegabilidad de la web
 
-[Drive] (https://drive.google.com/file/d/1E_8KGlcv2ZmFT1zSsP_-pZkMe8RIXHrq/view?usp=sharing)
+[Drive](https://drive.google.com/file/d/1E_8KGlcv2ZmFT1zSsP_-pZkMe8RIXHrq/view?usp=sharing)
 
 ## Deploy   
 
