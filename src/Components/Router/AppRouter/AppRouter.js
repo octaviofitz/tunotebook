@@ -15,6 +15,7 @@ import CategoriesPages from '../../../pages/CategoriesPages/CategoriesPages';
 import CartPage from '../../../pages/CartPage/CartPage'
 import CheckoutPage from '../../../pages/CheckoutPage/Checkoutpage'
 import CheckOutOrder from '../../../pages/CheckoutPage/CheckOutOrder';
+import ScrollToTop from '../../Secciones/ScrollToTop/ScrollToTop';
 
 
 function AppRouter() {
@@ -23,6 +24,7 @@ function AppRouter() {
         <BrowserRouter>
         
         <CartProvider>
+          <ScrollToTop />
         <NavBar />
         <Banner />
 
