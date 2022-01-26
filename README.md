@@ -38,5 +38,6 @@ npm start
 
 ## Deploy   
 
-> El proyecto fue deployado en la plataforma Vercel y lo pueden encontrar, completamente funcional, en el siguiente link: (https://tunotebook.vercel.app/)
+> El proyecto fue deployado en la plataforma Vercel y lo pueden encontrar, completamente funcional, en el siguiente link: [TuNotebook](https://tunotebook.vercel.app/)
+
  
