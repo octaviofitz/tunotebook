@@ -7,7 +7,7 @@ function About() {
 
 
     return (
-        <section className='about'>  
+        <section className='about' id='about'>  
         <BannerIMG />
         <div className='container-about'>
 

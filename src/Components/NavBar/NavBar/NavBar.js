@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 //styles
 import '../NavBar/navBar.css'
 //components
-import CartWidget from '../../Carrito/CartWidget/CartWidget';
+import CartWidget from '../../Carrito/CartWidget/CartWidget'; 
 
 function NavBar() {
   return (
-    <header>
+    <header id='header'>
     <div className='container-header'>
     <div className="header">
        

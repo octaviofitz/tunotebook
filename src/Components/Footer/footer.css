@@ -21,6 +21,7 @@
     color: #FFFFF1;
     text-decoration: none;
     list-style: none;
+    cursor: pointer;
 }
 
 @media (min-width: 720px) {

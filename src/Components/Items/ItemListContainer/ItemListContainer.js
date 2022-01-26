@@ -61,9 +61,9 @@ useEffect(() => {
     !==
     category 
     ? 
-    <h1 className='title-main'>Productos {category}</h1> 
+    <h1 className='title-main' id='productos'>Productos {category}</h1> 
     : 
-    <h1 className='title-main'>Productos Destacados</h1>
+    <h1 className='title-main' id='productos'>Productos Destacados</h1>
     }
              <ItemList data={products} loader={loader}
              
