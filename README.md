@@ -1,6 +1,6 @@
 # Tu Notebook
 
-> *Tu Notebook* es un ecommerce en desarrollo realizado en ReactJs con conexión a firebase desarrollado como proyecto final del curso de ReactJs de la plataforma [CODERHOUSE](https://www.coderhouse.com/)
+> *Tu Notebook* es un ecommerce en desarrollo realizado en ReactJs con conexión a firebase, desarrollado como proyecto final del curso de ReactJs de la plataforma [CODERHOUSE](https://www.coderhouse.com/)
 
 
 ## ¿Como instalarlo?
