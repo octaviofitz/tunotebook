@@ -24,7 +24,7 @@ npm start
 
 ## Tecnologías y herramientas utilizadas:
 
->- React Js: framework de javascript en el cual fue desarrollado el proyecto. Versión 17.0.2.
+>- React Js: librería de javascript en el cual fue desarrollado el proyecto. Versión 17.0.2.
 >- React-Router-Dom: encargado de la navegación entre los distintos componentes. Versión: 6.1.0
 >- FireBase: utilizado como base de datos. Versión: 9.6.1.
 >- Validator: realiza las validaciones de formularios. Versión 13.7.0.
